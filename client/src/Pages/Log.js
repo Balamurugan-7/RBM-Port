@@ -24,7 +24,7 @@ function Log() {
     }
     console.log('Logging in with:', { name, email });
 
-    axios.post('http://localhost:5000/', { name, email })
+    axios.post('https://rbm-port-backend.onrender.com/', { name, email })
       .then(() => {
         navigate('/Balamurugan');
       })
@@ -34,7 +34,7 @@ function Log() {
   }
 
   function go() {
-    axios.post('http://localhost:5000/', { name, email })
+    axios.post('https://rbm-port-backend.onrender.com/', { name, email })
       .then(() => {
         navigate('/Balamurugan');
       })
