@@ -1,0 +1,146 @@
+.platformtitle{
+    color: #fff;
+    font-family: font4;
+    width: 100%;
+    margin: 0%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    /* background-color: rgba(240, 248, 255, 0.76); */
+    /* box-shadow: 0 0 10px rgb(20, 196, 64); */
+    border-bottom: 2px solid rgba(0, 128, 0, 0.769);
+}
+.platformbox{
+    display: flex;
+    align-items: center;
+    animation: spininfy 100s infinite linear;
+    /* background-color: rgb(182, 111, 18); */
+    height: 80%;
+}
+.platform-inner-box{
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* background-color: antiquewhite; */
+}
+.platform-name{
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    text-align: center;
+    top:45%;
+    left: 0;
+}
+.platcircle{
+    /* position: static; */
+    position: absolute;
+    border: 4px solid white;
+    height:73%;
+    top:13%;
+    width:73%;
+    left:13%;
+    border-radius: 50%;
+    z-index: 0;
+}
+.platrow1,.platrow2,.platrow3{
+    height: max-content;
+    display: flex;
+    width:max-content;
+    align-items: center;
+    justify-content: space-between;
+}
+.platrow1,.platrow3{
+    justify-content: center;
+    width:100%;
+}
+.logo3{
+    margin-left: 8vw;
+}
+.platlogodiv{
+    height: 8vw;
+    width:8vw;
+    background-color: black;
+    /* background-color: #fff; */
+    border-radius: 50%;
+    /* overflow: hidden; */
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* position: relative; */
+    animation: spininfyrev 100s infinite linear;
+
+    position: relative;
+}
+.platlogodiv[title]{
+    visibility: none;
+}
+/* .tool1,.tool4{
+    left:67%;
+}
+.tool2{
+    left:33%;
+}
+.tool3{
+    right:33%;
+} */
+
+.platlogo{
+    width:70%;
+    height: 70%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.platlogodiv:hover .platlogodiv[data-title]{
+    visibility: none;
+  }
+  .platlogodiv[data-title]:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 100%;
+    z-index: 50;
+    background-color: black;
+    width: max-content;
+    color: #fff;
+    font-family: font2;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+  }
+/* .platformbox:hover{
+    animation: paused;
+    .platlogo{
+        animation: paused;
+    }
+} */
+@keyframes spininfy {
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes spininfyrev {
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+@media (max-width:440px){
+    .platrow1,.platrow3{
+        width:60vw;
+    }
+    .logo3{
+        margin-left: 20vw;
+    }
+    .platlogodiv{
+        height: 20vw;
+        width:20vw;
+    }
+}

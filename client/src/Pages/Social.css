@@ -1,0 +1,99 @@
+#social-con{
+    position: fixed;
+    right: 0;
+    width: max-content;
+    z-index: 100;
+    height: 100%;
+    display: flex;
+}
+#socialbox{
+    align-self: center;
+    display: flex;
+    top:35vh; 
+    width: max-content;
+    transform: translateX(40px);
+    transform-origin: right;
+    background-color: #3a3a3abb;
+    border-top-left-radius: 40%;
+    border-bottom-left-radius: 40%;
+    box-shadow: 0 0 5px rgb(20, 196, 64);
+}
+#socialbutton{
+    display: flex;
+    padding-left: 5px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+#socbut1
+,#socbut2{
+    align-self: center;
+    width: 30px;
+}
+.socialmedia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    align-content: space-between;
+    width:40px;
+    background-color: rgba(0, 0, 0, 0.801);
+    border-top: 1px solid #3a3a3abb;
+    border-bottom: 1px solid #3a3a3abb;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    /* border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%; */
+    /* transform: translateX(3vw); */
+}
+.fbicon{
+    height:35px;
+    /* width: 40px; */
+    padding: 5px;
+    margin: 10px;
+    /* background-color: aliceblue; */
+    border-radius: 12px;
+    /* margin-left: 1vw; */
+}
+/* .fbicon:hover{
+    cursor:pointer;
+} */
+.fbicon::before{
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0.678);
+    transform: skewX(45deg) translateX(150px);
+    transition: 0.5s;
+}
+.fbicon:hover::before{
+    transform: skewX(45deg) translateX(-150px);
+}
+
+@media (max-width:440px)
+{
+    #socialbox{
+        width: fit-content;
+        transform: translateX(40px);
+        padding-left: .5vw;
+        box-shadow: 0 0 5px rgb(20, 196, 64);
+    }
+    #socialbutton{
+        width: fit-content;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    #socbut1
+    ,#socbut2{
+        width: 15px;
+    }
+    .socialmedia{
+        align-content: space-between;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 40px;
+    }
+    .fbicon{
+        height:25px;
+        width: 25px;
+        padding: 2px;
+        margin: 5px;
+    }
+}

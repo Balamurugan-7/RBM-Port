@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuromancer:wght@300&display=swap');
+.wholecontainer{
+    display:flex;
+    width: 100vw;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.605);
+    cursor: url('../cursor2.png'),default;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    /* background: url('../media/1000.jpg') no-repeat center center fixed;
+    background-size: cover; */
+}
+.homecontainer{
+    font-family: "Neuromancer",cursive;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+#video {
+	object-fit: cover;
+	width: 100%;
+	height: 100vh;
+}
+video {
+    opacity: 1;
+	object-fit: cover;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -100;
+}
+.introtitle{
+    font-family: font5;
+    padding: 0;
+    margin: 0;
+    z-index: 50;
+    color: white;
+    position: absolute;
+    font-size: 5vw;
+    top: 0;
+    width:98vw;
+    animation: Mywelcome 2s forwards;
+    transform:scaleX(0) scaleY(0);
+    animation-delay: 2.5s;
+    
+    @media (max-width:440px){
+        font-size: 5vh;
+    }
+}
+.wellimg{
+    top: 0;
+    z-index: 50;
+    height: 100vh;
+    width: 98.9vw;
+    position: absolute;
+    background:url('../media/ag.jpg');
+    background-position: center;
+    background-size: cover;
+    animation: Myfaderev 2s forwards;
+    animation-delay: .5s;
+
+    @media (max-width:440px){
+        background:url('../media/agmobile.jpg');
+        background-size: cover;
+    }
+}
+#home{
+    top: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    /* cursor: url('../cursor.png'); */
+    @media (max-width:760px){
+        flex-direction: column;
+    }
+}
+.HomeTitle{
+    font-size:x-large;
+    color: #ffffff;
+    text-align: left;
+
+    @media (max-width:440px){
+        font-size: 4vw;
+    }
+}
+.welcome{
+    margin-left: 5%;
+    max-width: 60%;
+    min-width: 250px;
+    min-height: 150px;
+    height: max-content;
+    padding: 3%;
+    color: #ffffff;
+    box-shadow: 0 0 50px rgb(248, 248, 248);
+    background:url('../media/matrix-hacker.jpg');
+    background-size: cover;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    font-size: 2vw;
+
+    @media (max-width:440px){
+        padding: 5%;
+        max-width: unset;
+        min-width: unset;
+        min-height: unset;
+        width: max-content;
+    }
+}
+.professionname{
+    width: 100%;
+    font-size: larger;
+    font-family: font2;
+    border-top-left-radius: 50px;
+    padding-top: 1vh;
+    background-image: transparent;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.541), rgb(0, 0, 0));
+    
+    @media (max-width:650px) and (min-width:441px){
+        font-size:4vw;
+    }
+    @media (max-width:440px){
+        font-size:5vw;
+    }
+}
+.myname{
+    margin-bottom:0;
+    margin-top:2vh;
+    font-family:font1;
+    -webkit-box-reflect: below -3vh linear-gradient(transparent,transparent,#004);
+    
+    @media (max-width:650px) and (min-width:441px){
+        font-size: 6.3vw;
+        /* display: none; */
+    }
+    @media (max-width:440px){
+        font-size: 7.5vw;
+    }
+}
+#cvbutton{
+    color: black;
+    font-family: font1;
+    font-size: larger;
+    font-weight: bolder;
+    cursor: pointer;
+    width: 80%;
+    display:flex;
+    text-decoration: none;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    align-items:center;
+    justify-content:center;
+    background-image: transparent;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(238, 238, 238, 0.541), rgb(238, 238, 238));
+    
+    @media (max-width:440px){
+        font-size: 5vw;
+        font-weight: bolder;
+        height: 30%;
+    }
+}
+.resicon{
+    height:4vh;
+    width: 2vw;
+    padding: .5vh;
+    margin: 1vh;
+    border-radius: 12px;
+
+    @media (max-width:440px){
+        width: 7vw;
+    }
+}
+#picturecontainer{
+    max-width: 30vw;
+    max-height: 50vh;
+    height: 30vw;
+    width: 28vw;
+    border-radius: 50%;
+    border: 7px solid rgb(255, 255, 255);
+    background-color: #05240aab;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(248, 248, 248);
+    filter: drop-shadow(0 0 50px rgb(110, 178, 110));
+    
+    @media (max-width:440px){
+        max-width: unset;
+        height: 50vw;
+        width: 50vw;
+    }
+}
+
+.picture{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    opacity: .75;
+    
+    @media (max-width:650px){
+        
+    }
+}
+
+.hidden{
+    opacity: 0;
+    transition: 1s;
+}
+.show{
+    animation: Myfade 2s forwards;
+}
+.Skillsbox{
+    margin-top: 10vh;
+    width: 92vw;
+    height: 70vh;
+    margin-left: 8vw;
+    align-items: center;
+    
+    @media (max-width:650px){
+    
+    }
+}
+.internshiptitle{
+    color: #ffffff;
+    font-family: font3;
+    letter-spacing: 2px;
+    width: 50vw;
+    margin-bottom: 5vh;
+    
+    @media (max-width:440px){
+        width: 100%;
+    }
+}
+.Learnbox{
+    display: flex;
+    height: 90vh;
+    width: 88vw;
+    margin-left: 7vw;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    @media (max-width:650px){
+        height: max-content;
+        padding-bottom: 5%;
+        flex-direction: column;
+    }
+}
+.Internbox{
+    height: max-content;
+    margin-top: -10%;
+    /* align-items: center; */
+    
+    @media (min-width:440px) and (max-height:650px){
+        margin-top: 0;
+        height: 70vh;
+    }
+    @media (max-width:440px){
+        margin-top: 0;
+        margin-bottom: 50px;
+        width: 70vw;
+    }
+}
+.platbox{
+    width:30%;
+    height: max-content;
+    padding: 2vw;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.747);
+    box-shadow: 0 0 10px rgb(20, 196, 64);
+    border-radius: 50px;
+
+    @media (min-width:440px) and (max-width:650px){
+        width:50%;
+        height: 50%;
+        padding: 2vw;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.747);
+        box-shadow: 0 0 10px rgb(20, 196, 64);
+        border-radius: 50px;
+    }
+    @media (max-width:440px){
+        width:70%;
+        height: max-content;
+        padding: 2vw;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.747);
+        box-shadow: 0 0 10px rgb(20, 196, 64);
+        border-radius: 50px;
+    }
+}
+.corouselbox{
+    /* padding-top:20vh; */
+    width:100vw;
+    height:70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items:center;
+    background : url('../media/back.jpg') center fixed;
+    background-size:  cover;
+
+    @media (max-width:440px){
+        height:50vh;
+    }
+}
+
+.cert-modal{
+    backdrop-filter: blur(10px);
+    position: fixed;
+    font-family: font1;
+    width:100vw;
+    height:93vh;
+    padding-bottom: 7vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    transform: scaleX(0) scaleY(0);
+    z-index:100;
+
+    @media (max-width:650px){
+        
+    }
+}
+.cert-inner-modal{
+    /* background-color: #004; */
+    max-width:60%;
+    max-height:80%;
+    height: fit-content;
+    @media (max-width:650px){
+        margin-top: -30%;
+    }
+}
+.cert-inner-modal>img{
+    margin-left: -15%;
+    width:130%;
+    height:100%;
+}
+#certmodalname{
+    background: linear-gradient(to bottom, #7cde81, #47c442,#1d9a14, #075307);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+    @media (max-width:650px){
+    
+    }
+}
+#closeModal{
+    margin-left: 100%;
+    background-color: transparent;
+    font-size: x-large;
+    color: #ffffff;
+    font-family: font3;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+
+    @media (max-width:650px){
+        
+    }
+}

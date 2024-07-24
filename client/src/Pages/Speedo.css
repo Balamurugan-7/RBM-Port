@@ -1,0 +1,169 @@
+:root {
+    --green: rgb(5, 187, 93);
+  }
+  .skillset{
+    margin: 5vh;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    width: fit-content;
+    height: fit-content;
+  }
+  .gauge {
+    width: 100%;
+    height: 100%;
+  }
+  #skillperc{
+    position: relative;
+    color: white;
+    z-index: 5;
+    height: 50%;
+    top: 55%;
+    width: 100%;
+}
+#skillname{
+  font-family: font4;
+    position: relative;
+    color: white;
+    z-index: 5;
+    height: 50%;
+    width: 100%;
+    margin-bottom: 0%;
+  }
+  #progress {
+    position: relative;
+    width: 7vw;
+    height: 7vw;
+    border: .5vh solid rgb(255, 255, 255);
+    border-bottom: .1rem solid rgb(0, 0, 0);
+    border-radius: 50%;
+    outline: .5vh solid rgb(255, 255, 255);
+    outline-offset: .4rem;
+    overflow: hidden;
+    z-index: 2;
+  }
+
+  #progress::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 80%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  #progress::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left:0%;
+    width: 100%;
+    height: 50%;
+    background-color:black;
+    z-index: 2;
+  }
+
+  #bar {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(8, 184, 22);
+    transform: rotate(90deg);
+    transform-origin: center right;
+    /* animation: rotate 2s ease-in-out; */
+    z-index: 1;
+  }
+
+  #needle {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: rgb(255, 255, 255) !important;
+    clip-path: polygon(50% 0, 50% 0, 52% 100%, 48% 100%);
+    transform: rotate(90deg);
+    transform-origin: bottom center;
+    /* animation: rotate 2s ease-in-out; */
+    z-index: 300;
+  }
+
+  @keyframes rotate {
+    0% {
+      background-color: rgb(31, 54, 33);
+      transform: rotate(-90deg);
+      opacity: 0;
+    }
+    17% {
+      background-color: rgb(27, 66, 31);
+      transform: rotate(80deg);
+      opacity: 1;
+    }
+    35%{
+        background-color: rgb(24, 109, 31);
+        transform: rotate(-40deg);
+        opacity: 1;
+    }
+    60%{
+        background-color: rgb(14, 153, 25);
+        transform: rotate(60deg);
+        opacity: 1;
+    }
+    80%{
+        background-color: rgb(8, 184, 22);
+        transform: rotate(-20deg);
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(50deg);
+    }
+  }
+
+  .msg {
+    margin-top: 100px;
+    font: 1.3rem sans-serif;
+  }
+
+  .success {
+    border-radius: .4rem;
+    opacity: 0;
+    transition: .4s ease-out;
+  }
+
+  .success {
+    color: var(--green);
+    border:none;
+  }
+
+
+  .success.active {
+    opacity: 1;
+  }
+
+@media (max-width: 768px) {
+	.skillset{
+		margin: 5.5vw;
+		margin-top: 1.5vh;
+		margin-bottom: 1.5vh;
+		width: fit-content;
+		height: fit-content;
+	}
+	.gauge {
+		width: fit-content;
+		height: 100%;
+	}
+	#skillperc{
+		top: 38%;
+		font-size: 1.5vw;
+	}
+	#skillname{
+		position: relative;
+		color: white;
+		z-index: 5;
+		height: 30%;
+		width: 100%;
+		margin-bottom: 0%;
+		font-size: 2.5vw;
+	}
+}

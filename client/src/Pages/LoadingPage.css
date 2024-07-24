@@ -1,0 +1,92 @@
+.loading-container{
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.fingerbox{ 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rgb(38, 141, 232); */
+}
+.fingerbox .fingerprint{
+    position: relative;
+    width:300px;
+    height:380px;
+    background: url("../media/finger3.png");
+    background-repeat: no-repeat;
+    /* background-color: aqua; */
+    background-size: 300px;
+}
+.fingerbox .fingerprint::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background: url("../media/bala1.png");
+    background-repeat: no-repeat;
+    /* background-color: aqua; */
+    background-size: 300px;
+    animation:fingershow 4s ease-in-out infinite;
+}
+.fingerbox .fingerprint::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:8px;
+    /* background: url("../media/contacticon.png"); */
+    background-color: rgb(7, 221, 46);
+    border-radius: 4px;
+    /* background-size: 300px; */
+    animation:fingerlineshow 4s ease-in-out infinite;
+}
+
+@keyframes fingershow{
+    0%,100%{
+        height:0%;
+    }
+    50%{
+        height:100%
+    }
+}
+@keyframes fingerlineshow{
+    0%,100%{
+        top:0%;
+    }
+    50%{
+        top:100%
+    }
+}
+.fingerbox .loadingline{
+    color: aliceblue;
+    text-transform: uppercase;
+    font-size: 170%;
+    letter-spacing: 2px;
+    margin-top:10vh;
+    color: #3fef5c;
+    filter: drop-shadow(0 0 20px #3fef6b) drop-shadow(0 0 60px #3fefef);
+    animation:myopac2 1s ease-in-out infinite;
+}
+
+@media (max-width:440px)
+{
+    .fingerbox .fingerprint{
+        width:260px;
+        height:300px;
+        background-size: cover;
+    }
+    .fingerbox .fingerprint::before{
+        background-size: cover;
+        animation:fingershow 4s ease-in-out infinite;
+    }
+}

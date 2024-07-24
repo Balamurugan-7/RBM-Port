@@ -1,0 +1,124 @@
+.pfhomecontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('../media/bg3.png') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .visitorform {
+    padding: 4%;
+    border-radius: 30%;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.404);
+    text-align: center;
+    width: 30%;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgb(20, 196, 64);
+  }
+  
+  .h0 {
+    font-family: font1;
+    font-size: xx-large;
+    width: 100%;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10%;
+  }
+  
+  #loginSection {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #065016;
+    font-size: large;
+    color: aliceblue;
+    /* border: 1px solid #ccc; */
+    /* border-radius: 4px; */
+    background-color: transparent;
+    font-family: font2;
+  }
+  ::placeholder{
+    color: #70d36d;
+  }
+  .buts{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .visitorlog {
+    background: none;
+    color: rgb(11, 207, 37);
+    margin-top: 3%;
+    width: 30%;
+    font-family: font5;
+    font-size: larger;
+    border-width: 2px;
+    border-radius: 30%;
+    border-color: rgb(14, 124, 0);
+    padding: 3%;
+    cursor: pointer;
+  }
+  
+  .visitorlog:hover {
+    border-color: aliceblue;
+    border-width: 2px;
+    transform: scale(1.1);
+    background-color: rgb(4, 56, 26);
+  }
+  .skip{
+    background: none;
+    width:fit-content;
+    color: rgb(183, 233, 191);
+    margin-top: 3%;
+    font-family: font5;
+    font-size: larger;
+    border:none;
+    cursor: pointer;
+  }
+  /* Error animation */
+  .error {
+    animation: shake 0.5s;
+  }
+  
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25%, 75% {
+      transform: translateX(-5px);
+    }
+    50% {
+      transform: translateX(5px);
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .pfhomecontainer {
+      background: url('../media/logbgmobile.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+    .visitorform {
+      width: 70%;
+      background-color: rgba(0, 0, 0, 0.26);
+    }
+    .h0 {
+      font-size: 4vw;
+    }
+    .input {
+      font-size:3.5vw;
+    }
+    .visitorlog {
+      width: 30%;
+      font-size: 3.5vw;
+    }
+    .skip{
+      font-size: 3.5vw;
+    }
+  }

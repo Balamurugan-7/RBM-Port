@@ -1,0 +1,213 @@
+.projectsbox {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    
+    @media (max-width: 768px) {
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+        margin-left: 15%;
+        width: 70%;
+        height: max-content;
+        flex-direction: column;
+        align-items: unset;
+    }
+}
+
+#card1,
+#card2,
+#card3 {
+    width: 18vw;
+    height: 18vw;
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+    background-color: rgba(4, 77, 8, 0.486);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    position: relative;
+
+    @media (max-width: 768px) {
+        width: 28vw;
+        height: 28vw;
+    }
+    @media (max-width: 440px) {
+        width: 50vw;
+        height: 50vw;
+    }
+}
+
+#card2 {
+    @media (max-width: 768px) {
+        align-self: flex-end;
+    }
+}
+
+.card1front,
+.card2front,
+.card3front {
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 90%;
+    height: 90%;
+    z-index: 3;
+    backface-visibility: hidden;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(240, 248, 255);
+
+    @media (max-width: 768px) {
+        font-size: 4vw;
+    }
+    @media (max-width:440px){
+        font-size:4vh;
+    }
+}
+
+.card1back,
+.card2back,
+.card3back {
+    font-family: font2;
+    font-size: 1.3vw;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: rgb(5, 112, 32);
+    color: rgb(255, 255, 255);
+    transform: rotateY(180deg);
+    /* display: flex;
+    flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* padding: 20px; */
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+        font-size: 10px;
+    }
+}
+
+#card1box,
+#card2box,
+#card3box {
+    width: fit-content;
+    align-self: center;
+    margin: 10%;
+    @media (min-width:769px) {
+        margin:unset;
+    }
+}
+#card1box:hover #card1,
+#card2box:hover #card2,
+#card3box:hover #card3 {
+    transform: rotateY(180deg);
+    background-color: black;
+}
+
+#project1card,
+#project2card,
+#project3card {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    box-shadow: 0 0 10px rgb(20, 196, 64);
+
+    @media (max-width: 768px) {
+        z-index: 3;
+    }
+}
+
+#projectsimg {
+    margin-top: 5%;
+    width: 90%;
+    height: 80%;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+#projectname {
+    font-family: font2;
+    font-size: 1.5vw;
+    margin: 0;
+
+    @media (max-width: 768px) {
+        margin: 0;
+    }
+    @media (max-width: 440px) {
+        font-size: 4vw;
+    }
+}
+
+.cardbackbox {
+    height: 80%;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+}
+
+.prodisc {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    color: black;
+    font-size: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgba(240, 248, 255, 0.765);
+    text-align: justify;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    max-height: 50%;
+    overflow-y: scroll;
+}
+
+.demodisc {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 1.25vw;
+    text-align: justify;
+
+    @media (max-width: 768px) {
+        font-size: 10px;
+    }
+}
+
+.projectinline {
+    width: 100%;
+    border: 2px solid rgb(172, 196, 172);
+}
+
+#demobutton {
+    width: 100%;
+    color: green;
+    font-weight: bolder;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: rgb(255, 255, 255);
+}
+
+@media (max-width: 760px) {
+    #card1:hover,
+    #card2:hover,
+    #card3:hover {
+        transform: rotateY(180deg);
+        background-color: black;
+    }
+
+    #projectsimg {
+        margin-top: 5%;
+        width: 90%;
+        height: 80%;
+    }
+
+    #projectname {
+        margin: 0;
+    }
+}

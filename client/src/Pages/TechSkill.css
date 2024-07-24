@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Sixtyfour&display=swap');
+#Skills,
+#Certifications,
+#Edu,
+#Project{
+    /* background: url('../media/bg4.jpg') no-repeat center center;
+    background-size: cover; */
+    /* background-color: rgba(0, 0, 0, 0.652); */
+    width: 100vw;
+    min-height: 100vh;
+    /* z-index: -4; */
+    align-items: center;
+}
+#contact{
+    background-image: url('../media/back.jpg');
+    background-size: cover;
+}
+#Certifications{
+    min-height: unset;
+}
+.Skillspagebox{
+    display:flex;
+    justify-content:space-between;
+    margin-left:10vw;
+    margin-right:5vw;
+    margin-top:3vh;
+}
+.SkillsTitle{
+    margin: 0;
+    padding-top: 4vh;
+    padding-bottom: 2vh;
+    font-family: font1;
+    letter-spacing: 5px;
+    color: aliceblue;
+    top:0;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.652);
+    @media(max-width:500px)
+    {
+        font-size: 8vw;
+    }
+}
+.Tech .SkillsTitle{
+    position: -webkit-sticky;
+    position: sticky;
+
+}
+.TechSkills{
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.stick{
+    height: fit-content;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+}
+.Techtitle{
+    font-family: font3;
+    letter-spacing: 2px;
+    color: aliceblue;
+    /* animation: slideRight 1.5s ease-out; */
+    transform: scaleX(0);
+    transform-origin: left;
+    margin: 0px;
+    /* animation: animate .5s cubic-bezier(1, 1, 1, 1) forwards; */
+}
+.skill1{
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .Skillspagebox{
+        flex-direction: column;
+        margin-right:10vw;
+    }
+    .TechSkills{
+        width: 100%;
+    }
+    .Techtitle{
+        font-size: large;
+    }
+}
