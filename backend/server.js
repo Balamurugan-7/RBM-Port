@@ -45,7 +45,7 @@ app.post('/', async (req, res) => {
         service: 'gmail',
         auth: {
             user: 'rbmdb.cloud@gmail.com',
-            pass: "ftqc sgda ifly ptik"
+            pass: "dvhe xrnf njdx fotg"
         }
     }
     let transporter = nodemailer.createTransport(config);
